@@ -1,0 +1,21 @@
+
+1.在类上导入
+  import java.util.Arrays;
+
+  public static String toString(Type[] arr) ，返回指定数组内容的字符串表示形式。
+
+  public static String toString(Type[] arr) ，返回指定数组内容的字符串表示形式。
+  public static boolean equals(Type[] arr1, Type[] arr2)， 判断两个数组中的内容是否相同。元素的个数和顺序一致
+  public static void sort(Type[] arr) ，对数组中的内容进行升序排序。
+
+  public static int binarySearch(Type[] arr, Type key)
+   * 查找 key 在数组中的索引位置。如果找到，则返回索引位置；如果没找到，则返回一个负数。
+   * 注意：在调用此调用之前，必须先对数组进行排序。
+   二分查找 折半查找
+   [1,2,3,4,5,  6,7, 8  ,9,10]                9
+
+
+ public static void fill(Type[] arr, Type val)，给数组填充指定内容。
+ public static Type [] copyOf(Type[] original, Type newLength)`
+  * 从数组的第一个元素开始拷贝，拷贝指定长度的数组，拷贝完成返回一个新的数组。
+

@@ -1,0 +1,45 @@
+1.用户管理系统
+  用户
+     User
+       用户名(username) 唯一
+       密码(password)
+       用户组(userGroup)
+
+  用户组
+     UserGroup
+        组名称(name)
+        组描述(desc)
+
+  使用javabean来描述以上两个类：
+      1.有无参构造是被public修饰
+      2.成员变量都是私有的，每个成员变量都使用 getter 和 setter 方法访问。
+      3.使用idea的快捷键生成相关代码
+
+  用户工具类 UserUtil
+      public class UserUtil {
+          // 声明一个最终，静态的用户数组，来存储用户信息
+          public final static User[] USER_INFO = new User[10];
+
+          // 设计以下静态方法
+
+          // 添加用户到数组
+          public static void add(User user) {
+             // 要求：不能覆盖已有的用户，如果数组满了，提示已经满员
+                提示：arr[0] == null
+          }
+
+          // 从数组删除用户
+          public static void del(String username) {
+
+          }
+
+          // 控制台输出所有用户信息
+          public static void info() {
+
+          }
+
+          // 修改用户信息（选做）
+          public static update(User user) {
+
+          }
+      }

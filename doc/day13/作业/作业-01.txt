@@ -1,0 +1,23 @@
+1.内容管理
+  定义一个文章类 Article
+    两个成员变量：
+        title 标题
+        content 内容
+    一个成员方法：
+        // 打印输出文章的内容
+        void info() {
+
+        }
+
+  定义一个新闻类 News
+    四个成员变量：
+        title 标题
+        subTitle 副标题
+        createTime 新闻创建时间
+        content 新闻内容
+
+    一个成员方法：
+        // 打印输出新闻的内容
+        void info() {
+
+        }

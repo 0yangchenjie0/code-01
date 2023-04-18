@@ -1,0 +1,23 @@
+面向对象的编程语言
+  文件、文件夹
+File -- 对文件和文件夹的抽象描述
+new File --- 具体文件或文件
+
+1.File 类
+  java.io.File
+  构造方法
+     | public File(String pathname)             | 通过将给定路径名字符串转换为抽象路径名来创建一个新File实例  |
+     | public File(File parent, String child)   | 根据parent抽象路径名和child路径名字符串创建一个新File实例   |
+     | public File(String parent, String child) | 根据parent路径名字符串和child路径名字符串创建一个新File实例 |
+
+
+| public String[] list()    | 返回字符串数组，元素为子文件名字或子目录名字
+| public File[] listFiles() | 返回一个File数组，该元素为子目录File对象
+
+
+
+File 类的过滤器
+
+
+
+

@@ -1,0 +1,106 @@
+1.学习一个新的类的步骤
+   1.构造方法  创建对象
+   2.成员方法  调用成员方法
+   3.静态方法  提供了哪些不需要常见对象就能使用的方法
+2.包装类
+  2.1 基本数据类型转换成包装类
+     new Integer(100);
+     new Float(10.2);
+     // 将基本数据类型转换成包装类
+     Integer a1 = Integer.valueOf(100);
+     Double d1 = Double.valueOf(10.2);
+
+    基本类型转换成包装对象，注意事项：
+    1、针对 Character 类型，字符串不能转化为 Character 类型的包装对象。
+    2、针对Boolean类型，只有字符串为“true”(不区分大小写)的时候，转化为包装对象的值才为true，否则都为 false。
+    3、数值型的包装类中（不包含Character和Boolean），形参字符串的内容必须为数值型，否则抛出NumberFormatException异常。
+
+    总结：构造方法，valueOf
+
+  2.2 包装类转换成基本数据类型
+
+     数值型包装类是java.lang.Number的子类，Number类提供了抽象方法：
+       byteValue()、
+       shortValue()、
+       intValue()、
+       longValue()、
+       floatValue()、
+       doubleValue()，
+     意味着所有的数值型包装类都可以互相转型。
+      xxxValue() 方法
+      Double d1 = Double.valueOf(10.2);
+      // 将d1转换成 int 类型
+      int i1 = d1.intValue();
+      float f1 = d1.floatValue();
+
+    非数值型包装类中，
+      Boolean类型对象只能转化为boolean类型，因为它只有booleanValue()方法；
+      Character类型对象只能转化为char类型，因为它只有charValue()方法。
+
+   2.3 字符串和基本数据类型之间的转换
+
+      字符串-->基本数据类型
+
+      注意事项：
+      1、不能把字符串转化为char类型，因为没有parseChar(String value)方法。
+      2、针对Boolean类型，只有字符串为“true”的时候，转化为基本类型的值才为 true，否则都为 false。
+      3、整数型包装类，字符串中的内容必须是十进制整数；浮点型包装类中，字符串中的内容必须为十进制整数或浮点数，否则抛出
+                NumberFormatException异常。
+
+      基本数据类型 --> 字符串
+
+   2.4 自动装箱和拆箱
+      基本数据类型和包装类之间转换
+
+      基本类型-->包装类
+      Integer i1 = new Integer(100)
+      Integer i2 = Integer.valueOf(100);
+
+      包装类-->基本类型
+      Double d1 = Double.valueOf(10.2);
+      double = d1.doubleValue();
+
+      JDK5 之前
+         Integer i = 5; 错误
+         Integer i = new Integer(5);
+         或者
+         Integer i = Integer.valueOf(5);
+         ----------------------------------
+         Integer i = Integer.valueOf(5);
+
+         int i = i.intValue();
+
+
+      JDK5  之后
+         Integer i = 5; // 基本类型-->装箱-->包装类
+         int i = Integer.valueOf(5); // 包装类 --> 拆箱 ---> 基本数据类型
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

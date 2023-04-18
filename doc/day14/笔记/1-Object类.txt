@@ -1,0 +1,27 @@
+说明：
+  Object 类存储在 java.lang 包中，是所有 java 类 (Object类除外) 的终极父类。当然，数组也继承了 Object 类。如果在类的声明中未使用
+
+  extends 关键字指明其父类，则默认父类为Object类。
+
+
+  所有类都继承 Object
+    toString()  输出的是对象的地址
+    equals()    比较的是对象的地址是否相同
+
+
+    重写 toString() 输出对象的内容
+    重写 equals() 比较对象的内容是否相同
+
+    比较两个字符串是否相同，使用 equals() 方法，而不是 ==
+    "hello"   "hello"
+
+
+hashCode方法返回该对象的哈希码值，支持该方法是为哈希表提供一些优点，例如，java.util.Hashtable 提供的哈希表。
+我们直接输出一个对象，@之后接的就是哈希码值的16进制。
+
+
+一般重写了equals方法都要重写hashCode方法。
+  如果obj1.equals(obj2)的结果为true，
+  那么可以推出obj1对象和obj2对象的hashCode肯定相等，
+
+  但是hashCode相等不一定就满足equals。不过为了提高效率，应该尽量使上面两个条件接近等价。

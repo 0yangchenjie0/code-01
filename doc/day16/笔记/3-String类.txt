@@ -1,0 +1,85 @@
+String 类对象代表不可变的Unicode字符序列。什么叫做“不可变的对象”？指的是对象内部的成员变量的值无法再改变。我们打开 String类的源码：
+String s1 = "Hello";
+String s2 = new String("Hello");
+System.out.println(s1 == s2);// false
+System.out.println(s1.equals(s2));// true
+
+s1 和 s2 的创建方式有什么不同呢？
+- s1 创建，在内存中只有一个对象。这个对象在 字符串常量池中
+
+- s2 创建，在内存中有两个对象。
+  - 一个new的对象在 堆中，
+  - 一个字符串本身对象，在字符串常量池中
+
+  JDK8之后，字符串常量池也放到了堆空间
+
+常用方法：
+### 2.4.1 判断类的方法
+
+- **boolean equals(Object obj)**
+  - 判断两个字符串中的 **内容是否相同**
+- **boolean equalsIgnoreCase(String str)**
+  - 判断两个字符串中的 **内容是否相同**, **忽略大小写**
+- **boolean contains(String str)**
+  - 判断该字符串中 是否 **包含** 给定的字符串
+- **boolean startsWith(String str)**
+  - 判断该字符串 是否以给定的字符串 **开头**
+- **boolean endsWith(String str)**
+  - 判断该字符串 是否以给定的字符串 **结尾**
+- **boolean isEmpty()**
+  - 判断该字符串的内容 **是否为空** 的字符串  ""
+
+2.4.2 字符串遍历和截取
+
+- int length()
+  - 获取该字符串的长度
+- char charAt(int index)
+  - 获取该字符串中指定位置上的字符
+
+- String substring(int start)
+  - 从指定位置开始索引，到末尾结束，截取该字符串，返回新字符串
+
+- String substring(int start,int end)
+  - 从指定位置开始，到指定位置结束，截取该字符串，返回新字符串
+
+> 字符串处理截取的方法执行后会返回一个新的字符串，原来的字符串内容不变
+
+### 2.4.3 获取字符串索引
+
+- int indexOf(int ch)
+  - 获取给定的字符，在该字符串中第一次出现的位置
+
+- int indexOf(String str)
+  - 获取给定的字符串，在该字符串中第一次出现的位置
+
+- int lastIndexOf(int ch)
+  - 获取给定的字符，在该字符串中最后一次出现的位置
+
+- int lastIndexOf(String str)
+  - 获取给定的字符串，在该字符串最后一次出现的位置
+
+
+### 2.4.4 转换类方法
+
+- byte[] getBytes()
+  - 把该字符串转换成字节数组
+
+- char[] toCharArray()
+  - 把该字符串转换成 字符数组
+
+- String trim()
+- 去除字符串两端空格，中间的不会去除，返回一个新字符串
+
+- String toLowerCase()
+- 把该字符串转换成 小写字符串 ，返回一个新字符串
+
+- String toUpperCase()
+- 把该字符串转换成大写字符串，返回一个新字符串
+
+
+### 2.4.5 替换类的方法
+
+- String replace(char old,char new)
+  - 在该字符串中，将给定的旧字符，用新字符替换 ，返回一个新字符串
+- String replace(String old,String new)
+  - 在该字符串中， 将给定的旧字符串，用新字符串替换 ，返回一个新字符串

@@ -1,0 +1,50 @@
+String 和 StringBuffer 都可以用来存储和操作字符串。
+
+    String 类代表不可变的 Unicode字符序列，是字符串常量。
+    String 字符串一旦被初始化后，就不能再被改变其内容了(其原理在String类概述中已经讲述)。
+    对String字符串的操作实际上对其副本（原始拷贝）的操作，原来的字符串一点都没有改变。
+
+    String str = "hello"; // 创建了一个字符串
+    // 实际上原来的 "hello" 字符串对象已经丢弃了，现在又产生了一个字符串"hello世界"
+    str = str + "世界";
+
+    如果多次执行这些改变串内容的操作，会导致大量副本字符串对象存留在内存中，从而降低了程序的效率。
+
+ StringBuffer 类是抽象类 AbstractStringBuilder 的子类，**StringBuffer类代表可变的Unicode字符序列**，是字符串变量
+
+ AbstractStringBuilder 内部也是一个字符数组，但是这个字符数组没有用 final 修饰，那么意味着我们可以随时修
+ 改，所以我们又称 StringBuffer为 “可变字符序列”。
+
+ 因为 StringBuffer 类是对原字符串本身进行操作的，对字符串进行修改操作而不产生副本拷贝，效率较高。
+
+
+ 在需要频繁改变字符串变量的内容的时候，建议使用 StringBuffer 效率更高
+
+
+ - public StringBuffer append(String str)
+   - 在原有字符串缓冲区内容基础上，在末尾追加新数据，不会产生新的字符串
+
+
+ - public StringBuffer insert(int offset,String str)
+   - 在原有字符串缓冲区内容基础上，在指定位置插入新数据
+
+ - public StringBuffer deleteCharAt(int index)
+   - 在原有字符串缓冲区内容基础上，删除指定位置上的字符
+
+
+ - public StringBuffer delete(int start,int end)
+   - 在原有字符串缓冲区内容基础上，删除指定范围内的多个字符
+
+
+ -  public StringBuffer replace(int start,int end,String str)
+   - 在原有字符串缓冲区内容基础上，将指定范围内的多个字符 用给定的字符串替换
+
+ - public StringBuffer reverse()
+   - 将字符串缓冲区的内容 反转  "abc"----"cba"
+
+以下会返回新的字符串，不影响原来StringBuffer的内容
+
+- public String substring(int start)
+  - 从指定位置开始，到末尾结束，截取该字符串缓冲区，返回新字符串
+- public String substring(int start,int end)
+  - 从指定位置开始，到指定位置结束，截取该字符串缓冲区，返回新字符串

@@ -1,0 +1,8 @@
+面试的重要知识点：
+    1.StringBuilder 和 StringBuffer 的区别
+      StringBuffer 是线程安全的，效率较低
+      StringBuilder 是线程不安全的，效率较高
+    2.String 对象的内存结构
+      String a = "aaa";
+      String str = new String("aaa");
+      所有的字符串都存储在字符串常量池中

@@ -1,0 +1,14 @@
+break 关键字
+    在任何循环语句的主体部分，均可用 break 控制循环的流程。
+    break用于强行退出循环，不执行循环中剩余的语句。
+    适用于 switch语句和循环结构中。
+    当 break 作用于 for 循环上， “循环后的操作表达式”也不会执行。
+    注意：break 之后不允许书写别的代码语句，因为 break 会跳出当前循环或 switch，那么 break 之后的代码永远不会执行。
+
+break 的应用场景：
+  1.switch 分支结构，后续的 case 或 default 不再执行
+  2.循环结构，提前结束循环
+
+continue：
+  continue 只能用在循环结构中
+  1.继续执行下次循环，当次循环 continue 后面的语句不再执行

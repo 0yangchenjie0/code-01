@@ -1,0 +1,56 @@
+1.java开发环境搭建
+    1.1 jdk的安装和配置
+         理解环境变量的作用和配置
+         JAVA_HOME=D:\tool\jdk1.8.0_202
+         Path=%JAVA_HOME%\bin
+    1.2
+        javac  编译 将源代码编译成字节码
+        java   运行字节码  字节码--机器语言
+        javadoc 生成api文档（了解）
+2.入门程序
+    HelloWorld.java    类名的命名规则：大驼峰命名法：如果类名是一个单词，首字母大写，多个单词，每个单词的首字符大写。
+    public class HelloWorld {
+     // main 方法的名称 方法名和变量的命名规则：小驼峰命名法：如果是一个单词，全部小写，如果多个单词，第一个单词小写，后面的单词首字母大写
+     // main、sayHello
+     public static void main(String[] args) {
+         int age = 18;
+         int studentAge = 20;
+     }
+    }
+
+3.变量
+    3.1 数据类型
+        整数 		int
+        小数 		double
+        字符 		char
+        字符串 	String
+    3.2 声明变量
+        数据类型 变量名称 = 变量内容;
+        int age;  // 声明一个整数类型的变量
+        age = 18; // 给变量赋值
+        // 使用变量   注意：在方法中使用变量，变量必须先赋值才能使用
+        System.out.println(age);
+       
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     
+     

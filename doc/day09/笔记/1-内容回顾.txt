@@ -1,0 +1,157 @@
+1.初识 Java
+  1.1 Java开发环境搭建
+    a.jdk的安装和配置
+      jdk、jre、jvm
+        jdk 是java的开发者工具包，包含 jre
+        jre 是java的运行环境，包含jvm
+    b.理解java的跨平台特性
+        jvm 实现跨平台
+    c.Java 程序的执行流程
+       编写源代码 HelloWorld.java   IDEA
+       源代码编译成字节码 HelloWorld.class  javac
+       运行字节码，将HelloWorld.class的内容加载到jvm的内存去运行  java
+  1.2 基本语法
+     注释
+        单行注释 //
+        多行注释 /*   */
+        文档注释 /**  */
+     关键字
+        public static  void  return
+        if else switch case default
+        for while do break continue
+     标识符
+        类名、变量名称、方法名称、方法参数的名称
+     变量
+        数据类型 变量名称 = 变量内容;
+     常量
+        final 数据类型 常量名称 = 变量内容;
+2.数据类型和运算符
+    1.数据类型
+       基本数据类型
+          byte、short、int、long
+          float、double
+          boolean、[true、false]
+          char
+       引用数据类型
+          类
+             字符串   String str = "";
+          数组 --
+    2.运算符
+       算术运算符 +、-、*、\、%、++、--
+         + : 字符串拼接
+         ++i、i++ 的区别
+       赋值运算符
+         =、+=、-=、*=、\=、%=
+       比较运算符
+         == 、!=、>、>=、<、<=
+         比较运算符返回值都是 boolean 类型
+       逻辑运算符
+         !
+         &&
+         ||
+       位运算符(了解)
+       三元运算符
+         布尔表达式 ? 表达式1 : 表达式2
+       运算符的优先级
+         可以通过小括号改变运算的优先级
+3.流程控制语句
+    1.顺序结构
+    2.分支结构（选择结构）
+        if(布尔表达式) {
+
+        } else if(布尔表达式1) {
+
+        } else if(布尔表达式1) {
+
+        }
+        ....
+        else {
+
+        }
+
+        switch(变量) {
+           case: 常量 {
+              // 代码
+              break;
+           },
+           case: 常量 {
+              // 代码
+              break;
+           },
+           default: {
+
+           }
+        }
+
+    3.循环结构
+      for(int i=0;i<=10;i++) {
+         //
+      }
+
+      while(布尔表达式) {
+      }
+
+      do {
+
+      } while(布尔表达式)
+    4.break 和 continue 关键字
+    5.嵌套循环
+4.方法
+  定义方法
+     [修饰符] 返回值类型 方法名称(参数类型 参数1, 参数类型 参数2, 参数类型 参数3) {
+
+           // 执行语句
+           return 返回值;
+     }
+     注意事项：
+       1.方法的返回值必须和方法的返回值类型一致或可以自动类型转换
+       2.如果方法没有返回值
+          方法的返回值类型要定义成 void
+          可以省略 return 语句，或者写成 return;
+  调用方法
+    方法名称(参数1,参数2);
+    注意事项：
+     1.调用方法传入的参数顺序和类型要和定义方法的时候参数的顺序和类型一致或可以自动类型转换
+     2.有返回值的方法，可以将方法调用后的返回值赋值给另一个变量
+
+  方法的重载
+    在同一个类中，如果出现一组方法名称相同，参数类型或参数个数不同的方法，称为方法重载
+    方法的重载与方法的修饰符、返回值、参数名称无关。
+
+         public int add() {};
+         int add() {};
+
+         public int add() {};
+         public double add() {};
+
+         public int add(int i) {};
+         public double add(int j) {};
+
+         public int add(int i) {};
+         public int add(int j) {};
+
+         public int add(int i) {};
+         public int add(double i) {};
+         public int add(double i, int j) {};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
